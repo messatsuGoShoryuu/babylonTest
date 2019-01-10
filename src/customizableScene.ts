@@ -1,5 +1,5 @@
 
-import { Scene, AssetsManager, Engine, Camera, UniversalCamera, Vector3, Light, HemisphericLight, MeshAssetTask, CannonJSPlugin, IPhysicsEngine} from "babylonjs"
+import { Scene, AssetsManager, Engine, Camera, UniversalCamera, Vector3, Light, HemisphericLight, MeshAssetTask, CannonJSPlugin,  IPhysicsEngine, OimoJSPlugin} from "babylonjs"
 import Car from "./car"
 
 export default class CustomizableScene extends Scene {
@@ -7,8 +7,8 @@ export default class CustomizableScene extends Scene {
         super(engine);
         this.m_name = name;
         this.m_assetsManager = new AssetsManager(this);
-        var physicsPlugin : CannonJSPlugin = new CannonJSPlugin();
-        this.enablePhysics(new Vector3(0, -9.81, 0), physicsPlugin);            
+        var physicsPlugin : OimoJSPlugin = new OimoJSPlugin();
+        this.enablePhysics(new Vector3(0, -9.81, 0), physicsPlugin);                    
     }    
 
     public load(): void {
@@ -24,11 +24,12 @@ export default class CustomizableScene extends Scene {
         this.initialize();
         this.m_assetsManager.load();
 
+        var tar: EventTarget = new EventTarget();
     }
 
     protected onLevelLoaded() : void
     {
-
+    
     }
 
     protected mainLoop(): void {

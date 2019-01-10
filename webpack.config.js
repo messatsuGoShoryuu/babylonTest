@@ -16,7 +16,6 @@ module.exports = {
     },
     mode: "development",
     externals: {
-        "oimo": true,
         "earcut": true
     },
     devtool: "source-map"

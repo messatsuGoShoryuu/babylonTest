@@ -11,7 +11,7 @@
             "url": "http://localhost:85/workspace/babylonTest",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
-            "diagnosticLogging": true,
+            "trace": true,
             "sourceMapPathOverrides": {
                 "webpack:///./*": "${webRoot}/*"
             },

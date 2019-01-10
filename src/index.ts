@@ -9,7 +9,7 @@ module TestGame
     class Game
     {
         run(): void 
-        {
+        {            
             this.m_scenes[this.m_currentScene].load();
         }
 
